@@ -23,8 +23,9 @@ class Feedback extends Component {
     }
 
     countPositiveFeedbackPercentage() {
+        const {good}  = this.state;
         const count = this.countTotalFeedback();
-        return (count > 0) ? this.state.good * 100 / this.countTotalFeedback() : 0;
+        return (count > 0) ? good * 100 / this.countTotalFeedback() : 0;
     }
 
     onLeaveFeedback = (idx) => {
