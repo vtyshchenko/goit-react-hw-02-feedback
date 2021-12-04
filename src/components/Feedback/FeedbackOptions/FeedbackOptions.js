@@ -1,14 +1,20 @@
-
+import styles from './FeedbackOptions.module.scss';
 function FeedbackOptions({ options, onLeaveFeedback }) {
-
-    return (
-        <div>
-            {options.map((optionItem, index) => (
-                <button key={optionItem} onClick={() => onLeaveFeedback(index)}>{optionItem}</button>
-            ))}
-        </div>
-    );
+  console.log(styles);
+  return (
+    <div className={styles.options}>
+      {options.map((optionItem, index) => (
+        <button
+          type="button"
+          className={[styles.button, styles[optionItem]].join(' ')}
+          key={optionItem}
+          onClick={() => onLeaveFeedback(index)}
+        >
+          {optionItem}
+        </button>
+      ))}
+    </div>
+  );
 }
-
 
 export default FeedbackOptions;

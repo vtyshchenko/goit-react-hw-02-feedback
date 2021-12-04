@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+.options {
+  margin-bottom: 25px;
+}
+
+.button {
+  width: 90px;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.Good {
+  color: $text-main-color;
+  border-radius: $border-radius;
+  background-color: $background-color-good;
+}
+
+.Neutral {
+  background-color: $background-color-neutral;
+  color: $text-main-color;
+  border-radius: $border-radius;
+}
+
+.Bad {
+  background-color: $background-color-bad;
+  color: $text-main-color;
+  border-radius: $border-radius;
+  font-weight: 500;
+}

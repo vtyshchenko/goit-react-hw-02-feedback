@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.componenet {
+  width: 973px;
+  height: 473px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin: 25px auto 0;
+  border-radius: 20px;
+  background: center / cover no-repeat url('./images/background.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  display: block;
+  margin-left: 150px;
+  width: 320px;
+  border: 2px $container-border-color solid;
+  border-radius: 10px;
+  padding: 20px 10px;
+}

@@ -1,7 +1,7 @@
+import styles from './Notification.module.scss'
 
 function Notification({ message }) {
-
-    return <p>{message}</p>;
+    return <p className={styles.Notification}>{message}</p>;
 }
 
 

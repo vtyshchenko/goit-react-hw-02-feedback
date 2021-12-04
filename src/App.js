@@ -1,5 +1,7 @@
 import Feedback from './components/Feedback/Feedback';
-import './App.css';
+// import Thanks from './components/Feedback/Thanks/Thanks';
+
+import './App.scss';
 
 function App() {
   return (
