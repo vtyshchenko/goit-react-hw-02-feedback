@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Thanks.module.scss';
 
-class Thanks extends Component {
-  render() {
-    return (
-      <div>
-        <p className={styles.text}>
-          Thanks for your feedback. We are waiting for you again soon)))
-        </p>
-      </div>
-    );
-  }
+function Thanks({ message }) {
+  return (
+    <div>
+      <p className={styles.text}>{message}</p>
+    </div>
+  );
 }
+
+Notification.propTypes = {
+  message: PropTypes.string.isRequired,
+};
 
 export default Thanks;

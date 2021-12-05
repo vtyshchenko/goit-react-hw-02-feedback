@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 import styles from './FeedbackOptions.module.scss';
+
 function FeedbackOptions({ options, onLeaveFeedback }) {
-  console.log(styles);
   return (
     <div className={styles.options}>
       {options.map((optionItem, index) => (
@@ -16,5 +18,10 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
     </div>
   );
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired),
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
 
 export default FeedbackOptions;

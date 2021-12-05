@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Statistics from './Statistics/Statistics';
-import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
-import Section from './Section/Section';
-import Notification from './Notification/Notification';
-import Thanks from './Thanks/Thanks';
+import Statistics from './Statistics';
+import FeedbackOptions from './FeedbackOptions';
+import Section from './Section';
+import Notification from './Notification';
+import Thanks from './Thanks';
 
 import styles from './Feedback.module.scss';
 
@@ -33,16 +33,20 @@ class Feedback extends Component {
         this.setState(prevState => ({
           good: prevState.good + 1,
         }));
+        this.message = 'Thanks for your feedback. We are waiting for you again soon)))';
         break;
       case 'Neutral':
         this.setState(prevState => ({
           neutral: prevState.neutral + 1,
         }));
+        this.message = 'Thanks for your feedback. We will work on ourselves';
         break;
       case 'Bad':
         this.setState(prevState => ({
           bad: prevState.bad + 1,
         }));
+        this.message =
+          'Thanks for your feedback. Sorry to keep you unhappy. We will work on ourselves so that does not happen again';
         break;
 
       default:
@@ -75,7 +79,7 @@ class Feedback extends Component {
           )}
         </div>
 
-        {countTotal && <Thanks />}
+        {countTotal && <Thanks message={this.message} />}
       </div>
     );
   }

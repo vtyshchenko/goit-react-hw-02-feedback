@@ -1,5 +1,4 @@
-import Feedback from './components/Feedback/Feedback';
-// import Thanks from './components/Feedback/Thanks/Thanks';
+import Feedback from './components/Feedback';
 
 import './App.scss';
 
