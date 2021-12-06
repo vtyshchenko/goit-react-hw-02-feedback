@@ -15,19 +15,19 @@
 
 .Good {
   color: $text-main-color;
-  border-radius: $border-radius;
   background-color: $background-color-good;
+  border-radius: $border-radius;
 }
 
 .Neutral {
-  background-color: $background-color-neutral;
   color: $text-main-color;
+  background-color: $background-color-neutral;
   border-radius: $border-radius;
 }
 
 .Bad {
-  background-color: $background-color-bad;
-  color: $text-main-color;
-  border-radius: $border-radius;
   font-weight: 500;
+  color: $text-main-color;
+  background-color: $background-color-bad;
+  border-radius: $border-radius;
 }
